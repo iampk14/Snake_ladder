@@ -4,6 +4,7 @@ import random
 
 dice = [1, 2, 3, 4, 5, 6]
 
+# background
 image = "naruto2.gif"
 Snake_ladder = turtle.Screen()
 Snake_ladder.title("Snake & ladder")
@@ -47,29 +48,29 @@ while player_one.pos() < (290, 229):
     di=random.choice(dice)
     print(di)
     for i in range(1,di+1):
-        if player_one.xcor() <= (180) and player_one.ycor() == (-235) :
+        if player_one.xcor() <= (180) and player_one.ycor() == (-235) :   # first row
             player_one.forward(116)
 
-        elif player_one.pos() == (290, -235) :
+        elif player_one.pos() == (290, -235) :                            # first row to second row
             left()
 
-        elif player_one.xcor() >= (-180) and player_one.ycor() == (-119):
+        elif player_one.xcor() >= (-180) and player_one.ycor() == (-119): # second row
             player_one.forward(-116)
 
-        elif player_one.pos() == (-290, -119):
+        elif player_one.pos() == (-290, -119):                             #second row to third row
             left()
 
-        elif player_one.xcor() <= (180) and player_one.ycor() == (-3.0) :
+        elif player_one.xcor() <= (180) and player_one.ycor() == (-3.0) :  #third row
             player_one.forward(116)
 
-        elif player_one.pos() == (290, -3):
+        elif player_one.pos() == (290, -3):                          #third to fourth row
             left()
 
-        elif player_one.xcor() >= (-180) and player_one.ycor() == (113):
+        elif player_one.xcor() >= (-180) and player_one.ycor() == (113):  # fourth row
             player_one.forward(-116)
 
 
-        elif player_one.pos() == (-290, 113):
+        elif player_one.pos() == (-290, 113):    # 24 block to check direct final or row incrementation
 
             if di == 6:
                 player_one.goto(300, 235)
@@ -77,7 +78,7 @@ while player_one.pos() < (290, 229):
              left()
 
 
-        elif player_one.xcor() == (-290) and player_one.ycor() == (229):
+        elif player_one.xcor() == (-290) and player_one.ycor() == (229): # 25 block condition
 
             if di == 5:
 
@@ -92,7 +93,7 @@ while player_one.pos() < (290, 229):
                 player_one.forward(116)
 
 
-        elif player_one.xcor() == (-174) and player_one.ycor() == (229):
+        elif player_one.xcor() == (-174) and player_one.ycor() == (229):  # 26 block condition
 
             if di == 4:
 
@@ -107,7 +108,7 @@ while player_one.pos() < (290, 229):
                 player_one.forward(116)
 
 
-        elif player_one.xcor() == (-58) and player_one.ycor() == (229):
+        elif player_one.xcor() == (-58) and player_one.ycor() == (229):     # 27 block condition
 
             if di == 3:
 
@@ -122,7 +123,7 @@ while player_one.pos() < (290, 229):
                 player_one.forward(116)
 
 
-        elif player_one.xcor() == (58) and player_one.ycor() == (229):
+        elif player_one.xcor() == (58) and player_one.ycor() == (229):    # 28 block condition
 
             if di == 2:
 
@@ -137,7 +138,7 @@ while player_one.pos() < (290, 229):
                 player_one.forward(116)
 
 
-        elif player_one.xcor() == (174) and player_one.ycor() == (229):
+        elif player_one.xcor() == (174) and player_one.ycor() == (229):         # 29 block condition
 
             if di == 1:
 
